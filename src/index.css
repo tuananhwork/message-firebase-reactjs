@@ -1,3 +1,7 @@
+:root {
+  --border-color: rgba(255, 255, 255, 0.4);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: white;
+  color: #fff;
 }
 
 .container {
@@ -21,6 +25,15 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(20px);
   border-radius: 12px;
+  border: 1px solid var(--border-color);
   padding: 16px 0;
   display: flex;
+}
+
+.icons img {
+  transition: 0.12s;
+}
+
+.icons img:hover {
+  transform: translateY(-2px);
 }

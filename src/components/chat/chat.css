@@ -1,7 +1,7 @@
 .chat {
   flex: 2;
   padding: 12px;
-  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  border-right: 1px solid var(--border-color);
 
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(200, 200, 200, 0.6);
+  border-bottom: 1px solid var(--border-color);
 
   .info {
     display: flex;
@@ -50,10 +50,57 @@
 }
 
 .center {
+  /* display: flex; */
   flex: 1;
   /* background-color: #fff; */
   overflow-y: scroll;
   scroll-behavior: smooth;
+
+  .message {
+    display: flex;
+    gap: 8px;
+    max-width: 75%;
+    margin-bottom: 32px;
+
+    &.own {
+      margin-left: auto;
+
+      .texts {
+        p {
+          background-color: rgba(0, 132, 132, 0.75);
+        }
+      }
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .texts {
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        border-radius: 8px;
+        margin-bottom: 4px;
+        object-position: center;
+      }
+
+      p {
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        margin-bottom: 8px;
+      }
+
+      span {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
 }
 
 .bottom {
@@ -85,6 +132,7 @@
       color: #fff;
       font-size: 14px;
       border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     img {
@@ -113,4 +161,5 @@
   position: fixed !important;
   bottom: 40px;
   right: 28px;
+  z-index: 999;
 }

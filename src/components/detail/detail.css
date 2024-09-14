@@ -74,21 +74,38 @@
       }
     }
 
-    #blockBtn {
+    .btn {
       margin-top: auto;
-      padding: 8px 0;
-      background-color: transparent;
-      outline: none;
-      border: 1px solid rgb(155, 0, 0);
-      /* color: rgb(155, 0, 0); */
-      color: #c40000;
-      cursor: pointer;
-      font-weight: 500;
-      transition: 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
 
-      &:hover {
-        background-color: rgba(195, 0, 0, 0.2);
-        color: #fff;
+      button {
+        padding: 8px 0;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.15s;
+
+        &#blockBtn {
+          background-color: rgba(0, 0, 0, 0.25);
+          border: 1px solid rgb(155, 0, 0);
+          color: #c40000;
+          &:hover {
+            background-color: rgba(162, 23, 23, 0.801);
+            color: #ffffff;
+          }
+        }
+
+        &#logoutBtn {
+          background-color: rgba(184, 20, 20, 0.2);
+          border: 1px solid rgba(195, 50, 50, 0.333);
+          color: #ffffff;
+          &:hover {
+            background-color: rgba(136, 0, 0, 0.8);
+          }
+        }
       }
     }
   }

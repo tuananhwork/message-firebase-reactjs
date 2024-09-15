@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,6 +12,7 @@ const Login = () => {
   // Xử lý đăng ký tài khoản
   const handleSignup = (e) => {
     e.preventDefault();
+    toast.success('Test');
   };
 
   // Xử lý đăng nhập bằng email và password

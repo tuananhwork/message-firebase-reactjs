@@ -2,9 +2,10 @@ import Chat from './components/chat/Chat';
 import Detail from './components/detail/Detail';
 import Sidebar from './components/sidebar/Sidebar';
 import Login from './components/login/Login';
+import Notification from './components/notification/Notification';
 
 const App = () => {
-  const logged = true;
+  const logged = false;
 
   return (
     <>
@@ -18,6 +19,8 @@ const App = () => {
         ) : (
           <Login />
         )}
+
+        <Notification />
       </div>
     </>
   );

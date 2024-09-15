@@ -54,7 +54,7 @@ const Detail = () => {
             />
           </div>
           <div className="photos">
-            <div className="photo">
+            {/* <div className="photo">
               <div className="photoDetail">
                 <div className="img">
                   <img src="bg.jpg" alt="" className="img" />
@@ -80,7 +80,7 @@ const Detail = () => {
                 </div>
                 <span>bg.jpg</span>
               </div>
-            </div>
+            </div> */}
             <div className="photo">
               <div className="photoDetail">
                 <div className="img">

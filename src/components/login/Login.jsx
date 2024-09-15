@@ -1,14 +1,9 @@
-import { useState } from 'react';
 import './login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { toast } from 'react-toastify';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setconfirmPassword] = useState('');
-
   // Xử lý đăng ký tài khoản
   const handleSignup = (e) => {
     e.preventDefault();
@@ -18,7 +13,6 @@ const Login = () => {
   // Xử lý đăng nhập bằng email và password
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log('Logging in with email:', email, 'and password:', password);
     // Logic để xử lý đăng nhập email/password
   };
 
@@ -40,26 +34,12 @@ const Login = () => {
         <h2>Login to Chat App</h2>
         <div className="input-group">
           <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="login-email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            required
-          />
+          <input type="email" id="login-email" placeholder="Enter your email" required />
         </div>
 
         <div className="input-group">
           <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="login-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter your password"
-            required
-          />
+          <input type="password" id="login-password" placeholder="Enter your password" required />
         </div>
 
         <button type="submit" className="login-btn">
@@ -83,38 +63,17 @@ const Login = () => {
         <h2>Register to Chat App</h2>
         <div className="input-group">
           <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="signup-email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            required
-          />
+          <input type="email" id="signup-email" placeholder="Enter your email" required />
         </div>
 
         <div className="input-group">
           <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="signup-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter your password"
-            required
-          />
+          <input type="password" id="signup-password" placeholder="Enter your password" required />
         </div>
 
         <div className="input-group">
           <label htmlFor="confirm-password">Confirm Password:</label>
-          <input
-            type="password"
-            id="signup-confirm-password"
-            value={confirmPassword}
-            onChange={(e) => setconfirmPassword(e.target.value)}
-            placeholder="Re enter your password"
-            required
-          />
+          <input type="password" id="signup-confirm-password" placeholder="Re enter your password" required />
         </div>
 
         <button type="submit" className="signup-btn">

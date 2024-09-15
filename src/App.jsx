@@ -8,7 +8,7 @@ const App = () => {
   const logged = true;
 
   return (
-    <>
+    <div className="wrapper">
       <div className="container">
         {logged ? (
           <>
@@ -22,7 +22,7 @@ const App = () => {
 
         <Notification />
       </div>
-    </>
+    </div>
   );
 };
 

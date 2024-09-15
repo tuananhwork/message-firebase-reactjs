@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './detail.css';
 
 const Detail = () => {
-  const [arrowToggle, setArrowToggle] = useState(false);
+  const [arrows, setArrows] = useState({
+    chatSetting: false,
+    privacyHelp: false,
+    sharedPhotos: false,
+    sharedFiles: false,
+  });
+
+  const handleArrowToggle = (key) => {
+    setArrows((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
 
   return (
     <div className="detail">
@@ -16,22 +28,30 @@ const Detail = () => {
           <div className="title">
             <span>Chat Setting</span>
             <img
-              src={arrowToggle ? 'arrowUp.png' : 'arrowDown.png'}
-              alt=""
-              onClick={() => setArrowToggle((prev) => !prev)}
+              src={arrows.chatSetting ? 'arrowUp.png' : 'arrowDown.png'}
+              alt="Arrow Icon"
+              onClick={() => handleArrowToggle('chatSetting')}
             />
           </div>
         </div>
         <div className="option">
           <div className="title">
             <span>Privacy & help</span>
-            <img src="arrowUp.png" alt="" />
+            <img
+              src={arrows.privacyHelp ? 'arrowUp.png' : 'arrowDown.png'}
+              alt="Arrow Icon"
+              onClick={() => handleArrowToggle('privacyHelp')}
+            />
           </div>
         </div>
         <div className="option">
           <div className="title">
             <span>Shared photos</span>
-            <img src="arrowDown.png" alt="" />
+            <img
+              src={arrows.sharedPhotos ? 'arrowUp.png' : 'arrowDown.png'}
+              alt="Arrow Icon"
+              onClick={() => handleArrowToggle('sharedPhotos')}
+            />
           </div>
           <div className="photos">
             <div className="photo">
@@ -97,7 +117,11 @@ const Detail = () => {
         <div className="option">
           <div className="title">
             <span>Shared Files</span>
-            <img src="arrowUp.png" alt="" />
+            <img
+              src={arrows.sharedFiles ? 'arrowUp.png' : 'arrowDown.png'}
+              alt="Arrow Icon"
+              onClick={() => handleArrowToggle('sharedFiles')}
+            />
           </div>
         </div>
         <div className="btn">

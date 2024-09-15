@@ -5,13 +5,13 @@ import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyB7nXzMPdUH4hmwhZHd3p-CW0VRHWzssYg',
-  authDomain: 'messenger-react-anhcbt.firebaseapp.com',
-  projectId: 'messenger-react-anhcbt',
-  storageBucket: 'messenger-react-anhcbt.appspot.com',
-  messagingSenderId: '298478069607',
-  appId: '1:298478069607:web:ade342540721afd972f1c2',
-  measurementId: 'G-SKK2CLR8MS',
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
